@@ -16,10 +16,14 @@ public class Metodos {
      *
      * @param numero_ganador
      * @param numero_escogido
+     * @param intentos
      * @return boolean
      */
-    public static boolean comprobarGano(int numero_ganador, int numero_escogido) {
-        return (numero_ganador == numero_escogido);
+    public static boolean comprobarGano(int numero_ganador, int numero_escogido, int intentos) {
+        if (intentos < 10) {
+            return (numero_ganador == numero_escogido);
+        }
+        return false;
     }
 
     /**
